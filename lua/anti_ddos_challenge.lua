@@ -3206,12 +3206,10 @@ end
 
 local request_details = [[
 <br>
-<div id="status" style="color:#bd2426;font-size:200%;">
-<noscript>Please turn JavaScript on and reload the page.<br></noscript>
+<br>
 This process is automatic. Your browser will redirect to your requested content shortly.
 <br>
 Please allow up to <span id="countdowntimer">]] .. refresh_auth .. [[</span> seconds&hellip;
-</div>
 <br>
 <br>
 <h3 style="color:#bd2426;">Request Details :</h3>
@@ -3251,24 +3249,19 @@ local anti_ddos_html_output = [[
 ]] .. head_ad_slot .. [[
 ]] .. javascript_anti_ddos .. [[
 </head>
-<body style="background-color:#EEEEEE;color:#000000;font-family:Arial,Helvetica,sans-serif;font-size:100%;">
-<div style="width:auto;margin:16px auto;border:1px solid #CCCCCC;background-color:#FFFFFF;border-radius:3px 3px 3px 3px;padding:10px;">
-<div style="float:right;margin-top:10px;">
 <br/>
-<h1>Checking your browser</h1>
+<br/>
+<br/>
+<div id="status" style="color:#bd2426;font-size:200%;">
+<noscript>Please turn JavaScript on and reload the page.<br></noscript>
+<center>
+Checking your browser before accessing ]] .. host .. [[
+</center>
 </div>
-<br>
-<h1>]] .. title .. [[</h1>
-<p>
-<b>Please wait a moment while we verify your request</b>
-<br/>
-<br/>
-<br/>
 ]] .. top_body_ad_slot .. [[
 <br>
 <br>
 <center>
-<h2>Information :</h2>
 ]] .. request_details .. [[
 </center>
 ]] .. footer_body_ad_slot .. [[
@@ -3277,6 +3270,7 @@ local anti_ddos_html_output = [[
 </body>
 </html>
 ]]
+
 
 --All previous checks failed and no access_granted permited so display authentication check page.
 --Output Anti-DDoS Authentication Page
