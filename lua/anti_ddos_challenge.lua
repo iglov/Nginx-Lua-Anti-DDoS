@@ -1,3 +1,4 @@
+
 --[[
 Introduction and details :
 
@@ -57,7 +58,7 @@ http { #inside http block
 --[[
 This is a password that encrypts our puzzle and cookies unique to your sites and servers you should change this from the default.
 ]]
-local secret = "OLOLOYAVODITELNLO" --Signature secret key --CHANGE ME FROM DEFAULT!
+local secret = "CHANGE_ME" --Signature secret key --CHANGE ME FROM DEFAULT!
 
 --[[
 Unique id to identify each individual user and machine trying to access your website IP address works well.
@@ -3270,7 +3271,6 @@ Checking your browser before accessing ]] .. host .. [[
 </body>
 </html>
 ]]
-
 
 --All previous checks failed and no access_granted permited so display authentication check page.
 --Output Anti-DDoS Authentication Page
