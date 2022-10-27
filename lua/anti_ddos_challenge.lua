@@ -1,26 +1,8 @@
-
 --[[
-Introduction and details :
 
-Copyright Conor McKnight
+Copyright Conor McKnight (github.com/C0nw0nk)
 
-https://github.com/C0nw0nk/Nginx-Lua-Anti-DDoS
-
-Information :
-My name is Conor McKnight I am a developer of Lua, PHP, HTML, Javascript, MySQL, Visual Basics and various other languages over the years.
-This script was my soloution to check web traffic comming into webservers to authenticate that the inbound traffic is a legitimate browser and request,
-It was to help the main internet structure aswell as every form of webserver that sends traffic by HTTP(S) protect themselves from the DoS / DDoS (Distributed Denial of Service) antics of the internet.
-
-If you have any bugs issues or problems just post a Issue request. https://github.com/C0nw0nk/Nginx-Lua-Anti-DDoS/issues
-
-If you fork or make any changes to improve this or fix problems please do make a pull request for the community who also use this. https://github.com/C0nw0nk/Nginx-Lua-Anti-DDoS/pulls
-
-
-Disclaimer :
-I am not responsible for what you do with this script nor liable.
-
-Contact : (You can also contact me via github)
-https://www.facebook.com/C0nw0nk
+MIT license
 
 ]]
 
@@ -58,7 +40,7 @@ http { #inside http block
 --[[
 This is a password that encrypts our puzzle and cookies unique to your sites and servers you should change this from the default.
 ]]
-local secret = "CHANGE_ME" --Signature secret key --CHANGE ME FROM DEFAULT!
+local secret = "41a1629ca22ec7d25198919463c43ba7" --Signature secret key --CHANGE ME FROM DEFAULT!
 
 --[[
 Unique id to identify each individual user and machine trying to access your website IP address works well.
@@ -1852,11 +1834,11 @@ local function ip_address_in_range(input_ip, client_connecting_ip)
 
 		if tonumber(mask) == 1 then --127, 255, 255, 255
 			if client_ip1 >= in_range_low_end1 --in range low end
-			and client_ip1 <= in_range_top_end1 
+			and client_ip1 <= in_range_top_end1
 			and client_ip2 >= in_range_low_end2 --in range low end
-			and client_ip2 <= in_range_top_end2 
+			and client_ip2 <= in_range_top_end2
 			and client_ip3 >= in_range_low_end3 --in range low end
-			and client_ip3 <= in_range_top_end3 
+			and client_ip3 <= in_range_top_end3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
@@ -1864,11 +1846,11 @@ local function ip_address_in_range(input_ip, client_connecting_ip)
 		end
 		if tonumber(mask) == 2 then --63, 255, 255, 255
 			if client_ip1 >= in_range_low_end1 --in range low end
-			and client_ip1 <= in_range_top_end1 
+			and client_ip1 <= in_range_top_end1
 			and client_ip2 >= in_range_low_end2 --in range low end
-			and client_ip2 <= in_range_top_end2 
+			and client_ip2 <= in_range_top_end2
 			and client_ip3 >= in_range_low_end3 --in range low end
-			and client_ip3 <= in_range_top_end3 
+			and client_ip3 <= in_range_top_end3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
@@ -1876,11 +1858,11 @@ local function ip_address_in_range(input_ip, client_connecting_ip)
 		end
 		if tonumber(mask) == 3 then --31, 255, 255, 255
 			if client_ip1 >= in_range_low_end1 --in range low end
-			and client_ip1 <= in_range_top_end1 
+			and client_ip1 <= in_range_top_end1
 			and client_ip2 >= in_range_low_end2 --in range low end
-			and client_ip2 <= in_range_top_end2 
+			and client_ip2 <= in_range_top_end2
 			and client_ip3 >= in_range_low_end3 --in range low end
-			and client_ip3 <= in_range_top_end3 
+			and client_ip3 <= in_range_top_end3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
@@ -1888,11 +1870,11 @@ local function ip_address_in_range(input_ip, client_connecting_ip)
 		end
 		if tonumber(mask) == 4 then --15, 255, 255, 255
 			if client_ip1 >= in_range_low_end1 --in range low end
-			and client_ip1 <= in_range_top_end1 
+			and client_ip1 <= in_range_top_end1
 			and client_ip2 >= in_range_low_end2 --in range low end
-			and client_ip2 <= in_range_top_end2 
+			and client_ip2 <= in_range_top_end2
 			and client_ip3 >= in_range_low_end3 --in range low end
-			and client_ip3 <= in_range_top_end3 
+			and client_ip3 <= in_range_top_end3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
@@ -1900,11 +1882,11 @@ local function ip_address_in_range(input_ip, client_connecting_ip)
 		end
 		if tonumber(mask) == 5 then --7, 255, 255, 255
 			if client_ip1 >= in_range_low_end1 --in range low end
-			and client_ip1 <= in_range_top_end1 
+			and client_ip1 <= in_range_top_end1
 			and client_ip2 >= in_range_low_end2 --in range low end
-			and client_ip2 <= in_range_top_end2 
+			and client_ip2 <= in_range_top_end2
 			and client_ip3 >= in_range_low_end3 --in range low end
-			and client_ip3 <= in_range_top_end3 
+			and client_ip3 <= in_range_top_end3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
@@ -1912,11 +1894,11 @@ local function ip_address_in_range(input_ip, client_connecting_ip)
 		end
 		if tonumber(mask) == 6 then --3, 255, 255, 255
 			if client_ip1 >= in_range_low_end1 --in range low end
-			and client_ip1 <= in_range_top_end1 
+			and client_ip1 <= in_range_top_end1
 			and client_ip2 >= in_range_low_end2 --in range low end
-			and client_ip2 <= in_range_top_end2 
+			and client_ip2 <= in_range_top_end2
 			and client_ip3 >= in_range_low_end3 --in range low end
-			and client_ip3 <= in_range_top_end3 
+			and client_ip3 <= in_range_top_end3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
@@ -1924,127 +1906,127 @@ local function ip_address_in_range(input_ip, client_connecting_ip)
 		end
 		if tonumber(mask) == 7 then --1, 255, 255, 255
 			if client_ip1 >= in_range_low_end1 --in range low end
-			and client_ip1 <= in_range_top_end1 
+			and client_ip1 <= in_range_top_end1
 			and client_ip2 >= in_range_low_end2 --in range low end
-			and client_ip2 <= in_range_top_end2 
+			and client_ip2 <= in_range_top_end2
 			and client_ip3 >= in_range_low_end3 --in range low end
-			and client_ip3 <= in_range_top_end3 
+			and client_ip3 <= in_range_top_end3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
 			end
 		end
 		if tonumber(mask) == 8 then --0, 255, 255, 255
-			if ip1 == client_ip1 
+			if ip1 == client_ip1
 			and client_ip2 >= in_range_low_end2 --in range low end
-			and client_ip2 <= in_range_top_end2 
+			and client_ip2 <= in_range_top_end2
 			and client_ip3 >= in_range_low_end3 --in range low end
-			and client_ip3 <= in_range_top_end3 
+			and client_ip3 <= in_range_top_end3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
 			end
 		end
 		if tonumber(mask) == 9 then --0, 127, 255, 255
-			if ip1 == client_ip1 
+			if ip1 == client_ip1
 			and client_ip2 >= in_range_low_end2 --in range low end
-			and client_ip2 <= in_range_top_end2 
+			and client_ip2 <= in_range_top_end2
 			and client_ip3 >= in_range_low_end3 --in range low end
-			and client_ip3 <= in_range_top_end3 
+			and client_ip3 <= in_range_top_end3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
 			end
 		end
 		if tonumber(mask) == 10 then --0, 63, 255, 255
-			if ip1 == client_ip1 
+			if ip1 == client_ip1
 			and client_ip2 >= in_range_low_end2 --in range low end
-			and client_ip2 <= in_range_top_end2 
+			and client_ip2 <= in_range_top_end2
 			and client_ip3 >= in_range_low_end3 --in range low end
-			and client_ip3 <= in_range_top_end3 
+			and client_ip3 <= in_range_top_end3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
 			end
 		end
 		if tonumber(mask) == 11 then --0, 31, 255, 255
-			if ip1 == client_ip1 
+			if ip1 == client_ip1
 			and client_ip2 >= in_range_low_end2 --in range low end
-			and client_ip2 <= in_range_top_end2 
+			and client_ip2 <= in_range_top_end2
 			and client_ip3 >= in_range_low_end3 --in range low end
-			and client_ip3 <= in_range_top_end3 
+			and client_ip3 <= in_range_top_end3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
 			end
 		end
 		if tonumber(mask) == 12 then --0, 15, 255, 255
-			if ip1 == client_ip1 
+			if ip1 == client_ip1
 			and client_ip2 >= in_range_low_end2 --in range low end
-			and client_ip2 <= in_range_top_end2 
+			and client_ip2 <= in_range_top_end2
 			and client_ip3 >= in_range_low_end3 --in range low end
-			and client_ip3 <= in_range_top_end3 
+			and client_ip3 <= in_range_top_end3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
 			end
 		end
 		if tonumber(mask) == 13 then --0, 7, 255, 255
-			if ip1 == client_ip1 
+			if ip1 == client_ip1
 			and client_ip2 >= in_range_low_end2 --in range low end
-			and client_ip2 <= in_range_top_end2 
+			and client_ip2 <= in_range_top_end2
 			and client_ip3 >= in_range_low_end3 --in range low end
-			and client_ip3 <= in_range_top_end3 
+			and client_ip3 <= in_range_top_end3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
 			end
 		end
 		if tonumber(mask) == 14 then --0, 3, 255, 255
-			if ip1 == client_ip1 
+			if ip1 == client_ip1
 			and client_ip2 >= in_range_low_end2 --in range low end
-			and client_ip2 <= in_range_top_end2 
+			and client_ip2 <= in_range_top_end2
 			and client_ip3 >= in_range_low_end3 --in range low end
-			and client_ip3 <= in_range_top_end3 
+			and client_ip3 <= in_range_top_end3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
 			end
 		end
 		if tonumber(mask) == 15 then --0, 1, 255, 255
-			if ip1 == client_ip1 
+			if ip1 == client_ip1
 			and client_ip2 >= in_range_low_end2 --in range low end
-			and client_ip2 <= in_range_top_end2 
+			and client_ip2 <= in_range_top_end2
 			and client_ip3 >= in_range_low_end3 --in range low end
-			and client_ip3 <= in_range_top_end3 
+			and client_ip3 <= in_range_top_end3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
 			end
 		end
 		if tonumber(mask) == 16 then --0, 0, 255, 255
-			if ip1 == client_ip1 
-			and ip2 == client_ip2 
+			if ip1 == client_ip1
+			and ip2 == client_ip2
 			and client_ip3 >= in_range_low_end3 --in range low end
-			and client_ip3 <= in_range_top_end3 
+			and client_ip3 <= in_range_top_end3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
 			end
 		end
 		if tonumber(mask) == 17 then --0, 0, 127, 255
-			if ip1 == client_ip1 
-			and ip2 == client_ip2 
+			if ip1 == client_ip1
+			and ip2 == client_ip2
 			and client_ip3 >= in_range_low_end3 --in range low end
-			and client_ip3 <= in_range_top_end3 
+			and client_ip3 <= in_range_top_end3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
 			end
 		end
 		if tonumber(mask) == 18 then --0, 0, 63, 255
-			if ip1 == client_ip1 
-			and ip2 == client_ip2 
+			if ip1 == client_ip1
+			and ip2 == client_ip2
 			and client_ip3 >= in_range_low_end3 --in range low end
 			and client_ip3 <= in_range_top_end3
 			and client_ip4 >= in_range_low_end4 --in range low end
@@ -2053,122 +2035,122 @@ local function ip_address_in_range(input_ip, client_connecting_ip)
 			end
 		end
 		if tonumber(mask) == 19 then --0, 0, 31, 255
-			if ip1 == client_ip1 
-			and ip2 == client_ip2 
+			if ip1 == client_ip1
+			and ip2 == client_ip2
 			and client_ip3 >= in_range_low_end3 --in range low end
-			and client_ip3 <= in_range_top_end3 
+			and client_ip3 <= in_range_top_end3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
 			end
 		end
 		if tonumber(mask) == 20 then --0, 0, 15, 255
-			if ip1 == client_ip1 
-			and ip2 == client_ip2 
+			if ip1 == client_ip1
+			and ip2 == client_ip2
 			and client_ip3 >= in_range_low_end3 --in range low end
-			and client_ip3 <= in_range_top_end3 
+			and client_ip3 <= in_range_top_end3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
 			end
 		end
 		if tonumber(mask) == 21 then --0, 0, 7, 255
-			if ip1 == client_ip1 
-			and ip2 == client_ip2 
+			if ip1 == client_ip1
+			and ip2 == client_ip2
 			and client_ip3 >= in_range_low_end3 --in range low end
-			and client_ip3 <= in_range_top_end3 
+			and client_ip3 <= in_range_top_end3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
 			end
 		end
 		if tonumber(mask) == 22 then --0, 0, 3, 255
-			if ip1 == client_ip1 
-			and ip2 == client_ip2 
+			if ip1 == client_ip1
+			and ip2 == client_ip2
 			and client_ip3 >= in_range_low_end3 --in range low end
-			and client_ip3 <= in_range_top_end3 
+			and client_ip3 <= in_range_top_end3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
 			end
 		end
 		if tonumber(mask) == 23 then --0, 0, 1, 255
-			if ip1 == client_ip1 
-			and ip2 == client_ip2 
+			if ip1 == client_ip1
+			and ip2 == client_ip2
 			and client_ip3 >= in_range_low_end3 --in range low end
-			and client_ip3 <= in_range_top_end3 
+			and client_ip3 <= in_range_top_end3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
 			end
 		end
 		if tonumber(mask) == 24 then --0, 0, 0, 255
-			if ip1 == client_ip1 
-			and ip2 == client_ip2 
-			and ip3 == client_ip3 
+			if ip1 == client_ip1
+			and ip2 == client_ip2
+			and ip3 == client_ip3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
 			end
 		end
 		if tonumber(mask) == 25 then --0, 0, 0, 127
-			if ip1 == client_ip1 
-			and ip2 == client_ip2 
-			and ip3 == client_ip3 
+			if ip1 == client_ip1
+			and ip2 == client_ip2
+			and ip3 == client_ip3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
 			end
 		end
 		if tonumber(mask) == 26 then --0, 0, 0, 63
-			if ip1 == client_ip1 
-			and ip2 == client_ip2 
-			and ip3 == client_ip3 
+			if ip1 == client_ip1
+			and ip2 == client_ip2
+			and ip3 == client_ip3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
 			end
 		end
 		if tonumber(mask) == 27 then --0, 0, 0, 31
-			if ip1 == client_ip1 
-			and ip2 == client_ip2 
-			and ip3 == client_ip3 
+			if ip1 == client_ip1
+			and ip2 == client_ip2
+			and ip3 == client_ip3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
 			end
 		end
 		if tonumber(mask) == 28 then --0, 0, 0, 15
-			if ip1 == client_ip1 
-			and ip2 == client_ip2 
-			and ip3 == client_ip3 
+			if ip1 == client_ip1
+			and ip2 == client_ip2
+			and ip3 == client_ip3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
 			end
 		end
 		if tonumber(mask) == 29 then --0, 0, 0, 7
-			if ip1 == client_ip1 
-			and ip2 == client_ip2 
-			and ip3 == client_ip3 
+			if ip1 == client_ip1
+			and ip2 == client_ip2
+			and ip3 == client_ip3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
 			end
 		end
 		if tonumber(mask) == 30 then --0, 0, 0, 3
-			if ip1 == client_ip1 
-			and ip2 == client_ip2 
-			and ip3 == client_ip3 
+			if ip1 == client_ip1
+			and ip2 == client_ip2
+			and ip3 == client_ip3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
 			end
 		end
 		if tonumber(mask) == 31 then --0, 0, 0, 1
-			if ip1 == client_ip1 
-			and ip2 == client_ip2 
-			and ip3 == client_ip3 
+			if ip1 == client_ip1
+			and ip2 == client_ip2
+			and ip3 == client_ip3
 			and client_ip4 >= in_range_low_end4 --in range low end
 			and client_ip4 <= in_range_top_end4 then --in range top end
 				return true
@@ -2216,7 +2198,7 @@ local function WAF_Post_Requests()
 		local read_request_body_args = (ngx.req.get_body_data() or "") --Put the request body arguments into a variable
 		local args = (ngx.decode_args(read_request_body_args) or "") --Put the Post args in to a table
 
-		if next(args) ~= nil then --Check Post args table has contents	
+		if next(args) ~= nil then --Check Post args table has contents
 
 			local arguement1 = nil --create empty variable
 			local arguement2 = nil --create empty variable
@@ -2256,7 +2238,7 @@ local function WAF_Header_Requests()
 
 		local argument_request_headers = ngx.req.get_headers() --get our client request headers and put them into a table
 
-		if next(argument_request_headers) ~= nil then --Check Header args table has contents	
+		if next(argument_request_headers) ~= nil then --Check Header args table has contents
 
 			local arguement1 = nil --create empty variable
 			local arguement2 = nil --create empty variable
@@ -2337,13 +2319,13 @@ local function WAF_URI_Request()
 		--[[
 		Because ngx.var.uri is a bit stupid I strip the query string of the request uri.
 		The reason for this it is subject to normalisation
-		Consecutive / characters are replace by a single / 
-		and URL encoded characters are decoded 
+		Consecutive / characters are replace by a single /
+		and URL encoded characters are decoded
 		but then your back end webserver / application recieve the encoded uri!?
 		So to keep the security strong I match the same version your web application would need protecting from (Yes the encoded copy that could contain malicious / exploitable contents)
 		]]
 		local args = string.gsub(request_uri, "?.*", "") --remove the query string from the uri
-		
+
 		local WAF_table_length = #WAF_URI_Request_table
 		for i=1,WAF_table_length do --for each host in our table
 			local v = WAF_URI_Request_table[i]
@@ -2670,7 +2652,7 @@ local function encrypt_javascript(string1, type, defer_async, num_encrypt, encry
 
 		output = table.concat(chunks, "") --put our scrambled table into string
 		output = output .. "eval(decodeURIComponent(escape(window.atob(" .. table.concat(chunks_order, " + " ) .. "))));" --put our scrambled table and ordered table into a string
-		
+
 		if defer_async == "0" or defer_async == nil then --Browser default loading / execution order
 			output = "<script type=\"text/javascript\" charset=\"" .. default_charset .. "\" data-cfasync=\"false\">" .. output .. "</script>"
 		end
@@ -2961,7 +2943,7 @@ local function grant_access()
 	if req_headers["x-requested-with"] == "XMLHttpRequest" then --if request header matches request type of XMLHttpRequest
 		if req_headers[x_tor_header_name] == x_tor_header_name_value and req_headers[x_auth_header_name] == JavascriptPuzzleVars_answer then --if the header and value are what we expect then the client is legitimate
 			remote_addr = tor_remote_addr --set as our defined static tor variable to use
-			
+
 			challenge = calculate_signature(remote_addr .. challenge_original .. currentdate) --create our encrypted unique identification for the user visiting the website again. (Stops a double page refresh loop)
 			answer = calculate_signature(remote_addr) --create our answer again under the new remote_addr (Stops a double page refresh loop)
 			cookie_name_start_date = calculate_signature(remote_addr .. cookie_name_start_date_original .. currentdate) --create our cookie_name_start_date again under the new remote_addr (Stops a double page refresh loop)
@@ -3035,7 +3017,7 @@ grant_access() --perform checks to see if user can access the site or if they wi
 Build HTML Template
 ]]
 
-local title = host .. [[ | Anti-DDoS Flood Protection and Firewall]]
+local title = host
 
 --[[
 Javascript after setting cookie run xmlhttp GET request
@@ -3136,7 +3118,7 @@ local javascript_anti_ddos = [[
 			var xhttp = new XMLHttpRequest();
 			xhttp.onreadystatechange = function() {
 				if (xhttp.readyState === 4) {
-					document.getElementById("status").innerHTML = "Refresh your page.";
+					document.getElementById("status").innerHTML = "<br><br><h1>Refresh your page.</h1>";
 					location.reload(true);
 				}
 			};
@@ -3162,40 +3144,6 @@ else --some form of obfuscation has been specified so obfuscate the javascript o
 javascript_anti_ddos = encrypt_javascript(javascript_anti_ddos, encrypt_javascript_output) --run my function to encrypt/obfuscate javascript output
 end
 
-
---Adverts positions
-local head_ad_slot = [[
-<!-- Start: Ad code and script tags for header of page -->
-<!-- End: Ad code and script tags for header of page -->
-]]
-local top_body_ad_slot = [[
-<!-- Start: Ad code and script tags for top of page -->
-<!-- End: Ad code and script tags for top of page -->
-]]
-local left_body_ad_slot = [[
-<!-- Start: Ad code and script tags for left of page -->
-<!-- End: Ad code and script tags for left of page -->
-]]
-local right_body_ad_slot = [[
-<!-- Start: Ad code and script tags for right of page -->
-<!-- End: Ad code and script tags for right of page -->
-]]
-local footer_body_ad_slot = [[
-<!-- Start: Ad code and script tags for bottom of page -->
-<!-- End: Ad code and script tags for bottom of page -->
-]]
---End advert positions
-
-local ddos_credits = [[
-<div class="credits" style="text-align:center;font-size:100%;">
-<a href="//facebook.com/C0nw0nk" target="_blank">DDoS protection by &copy; Conor McKnight</a>
-</div>
-]]
-
-if credits == 2 then
-ddos_credits = "" --make empty string
-end
-
 --Fix remote_addr output as what ever IP address the Client is using
 if ngx.var.http_cf_connecting_ip ~= nil then
 remote_addr = ngx.var.http_cf_connecting_ip
@@ -3205,33 +3153,136 @@ else
 remote_addr = ngx.var.remote_addr
 end
 
-local request_details = [[
-<br>
-<br>
-This process is automatic. Your browser will redirect to your requested content shortly.
-<br>
-Please allow up to <span id="countdowntimer">]] .. refresh_auth .. [[</span> seconds&hellip;
-<br>
-<br>
-<h3 style="color:#bd2426;">Request Details :</h3>
-IP address : ]] .. remote_addr .. [[
-<br>
-Request URL : ]] .. URL .. [[
-<br>
-User-Agent : ]] .. user_agent .. [[
-<br>
+local style_sheet = [[
+body {
+	margin: 0;
+	font-family: 'Arial';
+	font-style: normal;
+}
+.mt-32 {
+	margin-top: 32px;
+}
+.mt-24 {
+	margin-top: 24px;
+}
+.mt-8 {
+	margin-top: 8px;
+}
+
+h1 {
+	font-size: 24px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #333333;
+}
+
+h2 {
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 400;
+	color: #333333;
+}
+
+.wrap {
+	max-width: 720px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
+	position: fixed;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+	.wrap {
+		top: 30%;
+	}
+}
+
+.grey-line {
+	width: 100%;
+	height: 2px;
+	background: #E6E6E6;
+}
+
+.text {
+	font-size: 12px;
+	line-height: 18px;
+	color: #666666;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.dot-flashing {
+	position: relative;
+	width: 14px;
+	height: 14px;
+	border-radius: 14px;
+	background-color: #8E8D8D;
+	color: #8E8D8D;
+	animation: dotFlashing 1s infinite linear alternate;
+	animation-delay: .5s;
+}
+
+.dot-flashing::before, .dot-flashing::after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: 0;
+}
+
+.dot-flashing::before {
+	left: -24px;
+	width: 14px;
+	height: 14px;
+	border-radius: 14px;
+	background-color: #8E8D8D;
+	color: #8E8D8D;
+	animation: dotFlashing 1s infinite alternate;
+	animation-delay: 0s;
+}
+
+.dot-flashing::after {
+	left: 24px;
+	width: 14px;
+	height: 14px;
+	border-radius: 14px;
+	background-color: #8E8D8D;
+	color: #8E8D8D;
+	animation: dotFlashing 1s infinite alternate;
+	animation-delay: 1s;
+}
+
+@keyframes dotFlashing {
+  0% {
+	  background-color: #8E8D8D;
+  }
+  50%,
+  100% {
+	  background-color: #dadada;
+  }
+}
 ]]
 
-local style_sheet = [[
-html, body {/*width: 100%; height: 100%;*/ margin: 0; padding: 0; overflow-wrap: break-word; word-wrap: break-word;}
-body {background-color: #ffffff; font-family: Helvetica, Arial, sans-serif; font-size: 100%;}
-h1 {font-size: 1.5em; color: #404040; text-align: center;}
-p {font-size: 1em; color: #404040; text-align: center; margin: 10px 0 0 0;}
-#spinner {margin: 0 auto 30px auto; display: block;}
-.attribution {margin-top: 20px;}
-@-webkit-keyframes bubbles { 33%: { -webkit-transform: translateY(10px); transform: translateY(10px); } 66% { -webkit-transform: translateY(-10px); transform: translateY(-10px); } 100% { -webkit-transform: translateY(0); transform: translateY(0); } }
-@keyframes bubbles { 33%: { -webkit-transform: translateY(10px); transform: translateY(10px); } 66% { -webkit-transform: translateY(-10px); transform: translateY(-10px); } 100% { -webkit-transform: translateY(0); transform: translateY(0); } }
-.bubbles { background-color: #404040; width:15px; height: 15px; margin:2px; border-radius:100%; -webkit-animation:bubbles 0.6s 0.07s infinite ease-in-out; animation:bubbles 0.6s 0.07s infinite ease-in-out; -webkit-animation-fill-mode:both; animation-fill-mode:both; display:inline-block; }
+local request_details = [[
+<div class="dot-flashing"></div>
+<h1 class="mt-32">Checking your browser before accessing ]] .. host .. [[</h1>
+<h2 class="mt-24">This process is automatic. Your browser will redirect to your requested content shortly.
+<br>
+<br>
+Please allow up to <span id="countdowntimer" class="bold">]] .. refresh_auth .. [[</span> seconds&hellip;</h2>
+<div class="grey-line mt-32"></div>
+<div class="text bold mt-32">Request Details</div>
+<div class="text mt-8">
+  IP address : ]] .. remote_addr .. [[ |
+  Request URL : ]] .. URL .. [[ |
+	User-Agent : ]] .. user_agent .. [[
+</div>
 ]]
 
 local anti_ddos_html_output = [[
@@ -3244,30 +3295,17 @@ local anti_ddos_html_output = [[
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <meta name="robots" content="noindex, nofollow" />
 <title>]] .. title .. [[</title>
-<style type="text/css">
+<style>
 ]] .. style_sheet .. [[
 </style>
-]] .. head_ad_slot .. [[
 ]] .. javascript_anti_ddos .. [[
 </head>
-<br/>
-<br/>
-<br/>
-<div id="status" style="color:#bd2426;font-size:200%;">
-<noscript>Please turn JavaScript on and reload the page.<br></noscript>
-<center>
-Checking your browser before accessing ]] .. host .. [[
-</center>
-</div>
-]] .. top_body_ad_slot .. [[
-<br>
-<br>
-<center>
+<noscript>Please turn JavaScript on and reload the page.<br /></noscript>
+<body>
+<div class="wrap">
 ]] .. request_details .. [[
-</center>
-]] .. footer_body_ad_slot .. [[
+<div id="status"></div>
 </div>
-]] .. ddos_credits .. [[
 </body>
 </html>
 ]]
@@ -3284,9 +3322,6 @@ ngx.header["X-XSS-Protection"] = "1; mode=block"
 ngx.header["Cache-Control"] = "public, max-age=0 no-store, no-cache, must-revalidate, post-check=0, pre-check=0"
 ngx.header["Pragma"] = "no-cache"
 ngx.header["Expires"] = "0"
-if credits == 1 then
-ngx.header["X-Anti-DDoS"] = "Conor McKnight | facebook.com/C0nw0nk"
-end
 ngx.header.content_type = "text/html; charset=" .. default_charset
 ngx.status = authentication_page_status_output
 ngx.say(anti_ddos_html_output)
